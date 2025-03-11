@@ -15,7 +15,7 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 
-# This is a generated file. Don't change it
+# This is a generated file. Don't change it!
 
 Descriptives <- function(
           data = NULL,
@@ -28,7 +28,7 @@ Descriptives <- function(
           boxPlotJitter = FALSE,
           boxPlotOutlierLabel = FALSE,
           boxPlotViolin = FALSE,
-          ciBootstrapSamples = 1000,
+          ciBootstrapSamples = 0,
           coefficientOfVariation = FALSE,
           colorPalette = "colorblind",
           correlation = FALSE,
@@ -124,8 +124,9 @@ Descriptives <- function(
    options[["data"]] <- NULL
    options[["version"]] <- NULL
 
+
    if (!jaspBase::jaspResultsCalledFromJasp() && !is.null(data)) {
-	   jaspBase::storeDataSet(data)
+      jaspBase::storeDataSet(data)
    }
 
    if (!is.null(formula)) {
@@ -134,10 +135,9 @@ Descriptives <- function(
       }
       options$formula <- jaspBase::jaspFormula(formula, data)
    }
-
    optionsWithFormula <- c("associationMatrixUse", "colorPalette", "densityPlotSeparate", "distributionAndCorrelationPlotHistogramBinWidthType", "heatmapHorizontalAxis", "heatmapVerticalAxis", "likertPlotAdjustableFontSize", "meanCiMethod", "sdCiMethod", "splitBy", "variables", "varianceCiMethod")
    for (name in optionsWithFormula) {
       if ((name %in% optionsWithFormula) && inherits(options[[name]], "formula")) options[[name]] = jaspBase::jaspFormula(options[[name]], data)   }
 
-   return(jaspBase::runWrappedAnalysis("jaspDescriptives", "Descriptives", "Descriptives.qml", options, version))
+   return(jaspBase::runWrappedAnalysis("jaspDescriptives", "Descriptives", "Descriptives.qml", options, version, FALSE))
 }
