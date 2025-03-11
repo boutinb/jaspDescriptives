@@ -16,13 +16,10 @@ Imports:
   jaspGraphs,
   jaspTTests,
   forecast,
-  flexplot,
   ggrain,
-  ggpp,
   ggtext,
   dplyr
 Remotes:
   jasp-stats/jaspBase,
   jasp-stats/jaspGraphs,
   jasp-stats/jaspTTests,
-  dustinfife/flexplot
