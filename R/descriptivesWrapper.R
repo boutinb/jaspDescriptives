@@ -28,7 +28,7 @@ Descriptives <- function(
           boxPlotJitter = FALSE,
           boxPlotOutlierLabel = FALSE,
           boxPlotViolin = FALSE,
-          ciBootstrapSamples = 0,
+          ciBootstrapSamples = 999,
           coefficientOfVariation = FALSE,
           colorPalette = "colorblind",
           correlation = FALSE,

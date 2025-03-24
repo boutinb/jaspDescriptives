@@ -42,6 +42,12 @@ Form
 		rhs: "variables"
 	}
 
+	FormulaField
+	{
+		name: "test"
+		value: "1 + 2"
+	}
+
 	VariablesForm
 	{
 		infoLabel: qsTr("Input")
@@ -246,7 +252,7 @@ Form
 					name:			"ciBootstrapSamples"
 					label:			qsTr("Bootstrap samples")
 					info: 			qsTr("the number of bootstrap samples to be used.")
-					defaultValue:	1000
+					defaultValue:	999
 					min:			1;
 					max:			50000;
 				}
